@@ -1,4 +1,4 @@
-# movesense_sensor(ros)
+# movesense_sensor(rosbuild)
 
 ## Depends
 1. before you build your movesense_sensor package, please make sure you have installed the [movesense] libaries.

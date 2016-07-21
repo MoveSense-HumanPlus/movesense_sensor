@@ -3,6 +3,7 @@
 ## Depends
 1. before you build your movesense_sensor package, please make sure you have installed the **movesense** libaries.
   see **./MoveSenseSDK1.0.1/README.md**
+
   you can also get the source code form **https://github.com/MoveSense-HumanPlus/MoveSenseSDK-linux.git** 
 
 ## ROS

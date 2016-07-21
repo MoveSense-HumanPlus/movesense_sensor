@@ -44,7 +44,7 @@
   
   open a new termina to display images:
 
-		$ rosrun image_view image_view image:=/movesense/left/image_raw
+		$ rosrun image_view image_view image:=/movesense_sensor/left/image_raw
 
   lauch rviz with the following command. Then click on **add** (bottom left), select the **By Topic** tab, select **movesense_sensor->left->image_raw** and click **OK**.
 

@@ -17,37 +17,53 @@
  **The package can not be compiled without ROS**
   **this package will build with rosbuild**
   
-  cd movesense_sensor
-  chmod +x build.sh
-  ./build.sh
+		cd movesense_sensor
+		chmod +x build.sh
+		./build.sh
 
   This will executables **movesense_sensor_LR_node, movesense_sensor_LD_node, movesense_sensor_LRD_node**in *movesense_sensor* folder.
 
 4. run the movesense_sensor package
-  you shuld run command **$ source ./build/devel/setup.bash** to add your package in ROS PATH
-  and run a new terminal, input the command **$ roscore** and run
+  you shuld run following command to add your package in ROS PATH.
 
-  use **$ rosrun movesense_sensor movesense_sensor_LR_node** to run the LR mode of MoveSenseSensor
+		$ source ./build/devel/setup.bash
   
-  now you can 
+  before run the movesense_sensor package, you shuld open a new termina and run:
+
+		$ roscore
+ 
+
+  to run the LR mode of MoveSenseSensor,use
+		
+		$ rosrun movesense_sensor movesense_sensor_LR_node 
   
-  use **$ rostopic list** in a new terminal to see the topic list and **$ rostopic echo /movesense/left/image_raw** to see the image data;
+  now you can open a new termina to see the topic:
   
-  use **$ rosrun rviz rviz** in a new terminal to run the Rviz to see the image;
+		$ rostopic list
+		$ rostopic echo /movesense/left/image_raw
   
-  use **$ rosrun image_view image_view image:=/movesense/left/image_raw**in a new terminal to run the image view to see the image.
+  open a new termina to display images:
+
+		$ rosrun image_view image_view image:=/movesense/left/image_raw
+
+  lauch rviz with the following command. Then click on **add** (bottom left), select the **By Topic** tab, select **movesense->left->image_raw** and click **OK**.
+
+		$ rosrun rviz rviz** in a new terminal to run the Rviz to see the image;
+  
   
   when run **movesense_sensor_LR_node**, the MoveSenseSensor while work in default mode:
              
-		"The camera default launch mode is : 'CAM_STEREO_752X480_LR_30FPS'."
-		"default param path  is: ./config"
-		"default topic is :"
-		"/movesense_sensor/left/image_raw"
-		"/movesense_sensor/left/camera_info"
-		"/movesense_sensor/right/image_raw"
-		"/movesense_sensor/right/camera_info");
+		The camera default launch mode is : 'CAM_STEREO_752X480_LR_30FPS'.
+		default param path  is: ./config
+		default topic is :
+		/movesense_sensor/left/image_raw
+		/movesense_sensor/left/camera_info
+		/movesense_sensor/right/image_raw
+		/movesense_sensor/right/camera_info);
              
-  you can use **$ rosrun movesense_sensor movesense_sensor_LR_node mode:=New_Mode param:=You_Param_Path** to change the default param.
+  to change the default param of movesense_sensor, use:
+
+		$ rosrun movesense_sensor movesense_sensor_LR_node mode:=CAM_STEREO_752X480_LR_30FPS param:=./config.
 
   you can use the following keyword to change the sensor work mode
   
@@ -58,7 +74,9 @@
 		CAM_STEREO_376X240_LD_30FPS			'LD_NODE'
 		CAM_STEREO_376X240_LRD_30FPS		'LRD_NODE'
   
-  you can stop you movesense_sensor node whit **CTRL+C** command.
+  you can stop you movesense_sensor node whit the command:
+
+		CTRL+C
   
 ## ORB_SLAME packge
   get the source code form **https://github.com/raulmur/ORB_SLAM2.git**

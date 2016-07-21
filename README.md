@@ -46,9 +46,9 @@
 
 		$ rosrun image_view image_view image:=/movesense/left/image_raw
 
-  lauch rviz with the following command. Then click on **add** (bottom left), select the **By Topic** tab, select **movesense->left->image_raw** and click **OK**.
+  lauch rviz with the following command. Then click on **add** (bottom left), select the **By Topic** tab, select **movesense_sensor->left->image_raw** and click **OK**.
 
-		$ rosrun rviz rviz** in a new terminal to run the Rviz to see the image;
+		$ rosrun rviz rviz
   
   
   when run **movesense_sensor_LR_node**, the MoveSenseSensor while work in default mode:

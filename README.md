@@ -91,4 +91,4 @@
 		
 		$ rosrun movesense_sensor movesense_sensor_LR_node __name:=image
   
-  don't forget update the camera param from **movesense_sensor/config/camera_param** to **ORB_SLAM2/Examples/Stereo/EuRoC.yaml**
+  don't forget update the camera param from **movesense_sensor/config/camera_param.yaml** to **ORB_SLAM2/Examples/Stereo/EuRoC.yaml**
